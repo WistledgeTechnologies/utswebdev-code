@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Register for access to our platform. Fill out your personal and contact information.">
+  <meta name="keywords" content="registration, form, signup, user info">
+  <meta name="author" content="Victor">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main role="main">
+    <div class="form-container" role="form" aria-labelledby="formTitle">
+      <h2 id="formTitle">Registration Form</h2>
+
+      <form id="registrationForm" aria-describedby="formInstructions">
+        <p id="formInstructions">Please fill out all required fields marked with an asterisk (*).</p>
+
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <div class="form-group">
+            <label for="firstName">First Name *</label><br>
+            <input type="text" id="firstName" name="firstName" required aria-required="true" placeholder="Enter your first name" value="Victor">
+          </div>
+           <br>
+          <div class="form-group">
+            <label for="surname">Last Name *</label><br>
+            <input type="text" id="surname" name="surname" required aria-required="true" placeholder="Enter your last name">
+          </div>
+           <br>
+          <div class="form-group">
+            <label for="email">Email *</label><br>
+            <input type="email" id="email" name="email" required aria-required="true" placeholder="Enter your email">
+          </div>
+           <br>
+          <div class="form-group">
+            <label for="phone">Phone</label><br>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="link">Website URL</label><br>
+            <input type="url" id="link" name="link" placeholder="https://example.com">
+          </div>
+           <br>
+          <div class="form-group">
+            <label for="password">Password *</label><br>
+            <input type="password" id="password" name="password" required aria-required="true" minlength="8" placeholder="Minimum 8 characters">
+          </div>
+           <br>
+          <div class="form-group">
+            <label for="confirmPassword">Confirm Password *</label><br>
+            <input type="password" id="confirmPassword" name="confirmPassword" required aria-required="true" minlength="8" placeholder="Re-enter password">
+          </div>
+           <br>
+          <button type="submit" aria-label="Submit registration form">Register</button>
+        </fieldset>
+          <br>
+        <fieldset>
+          <legend>Numeric and Range Fields</legend>
+
+          <div class="form-group">
+            <label for="age">Age *</label><br>
+            <input type="number" id="age" name="age" required aria-required="true" min="13" max="120">
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="range">Choose Range *</label><br>
+            <input type="range" id="range" name="range" required aria-required="true" aria-valuemin="0" aria-valuemax="100" oninput="document.getElementById('age').value=this.value">
+          </div>
+          <br>
+        </fieldset>
+            <br>
+        <fieldset>
+          <legend>Date and Time Fields</legend>
+
+          <div class="form-group">
+            <label for="dateOfBirth">Date of Birth</label><br>
+            <input type="date" id="dateOfBirth" name="dateOfBirth">
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="time">Time</label><br>
+            <input type="time" id="time" name="time">
+          </div>
+           <br>
+          <div class="form-group">
+            <label for="week">Week</label><br>
+            <input type="week" id="week" name="week">
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="month">Month</label><br>
+            <input type="month" id="month" name="month">
+          </div>
+        </fieldset>
+        <br>
+
+        <fieldset>
+          <legend>Color and Search Fields</legend>
+
+          <div class="form-group">
+            <label for="color">Favorite Color</label><br>
+            <input type="color" id="color" name="color">
+          </div>
+          <br>
+
+          <div class="form-group">
+            <label for="search">Search</label><br>
+            <input type="search" id="search" name="search" placeholder="Search...">
+          </div>
+        </fieldset>
+        <br>
+
+        <fieldset>
+          <legend>Choice Fields</legend>
+          <br>
+
+          <div class="form-group" role="radiogroup" aria-labelledby="genderLabel">
+            <span id="genderLabel">Gender *</span><br>
+            <input type="radio" id="male" name="gender" value="male" required aria-required="true">
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+          </div>
+          <br>
+
+          <div class="form-group">
+            <label for="country">Country *</label><br>
+            <select name="country" id="country" required aria-required="true">
+              <option value="" disabled selected>Choose your country</option>
+              <option value="us">United States</option>
+              <option value="ca">Canada</option>
+              <option value="uk">United Kingdom</option>
+              <option value="ng">Nigeria</option>
+            </select>
+          </div>
+          <br>
+
+          <div class="form-group">
+            <label for="bio">Brief Description</label>
+            <textarea id="bio" name="bio" rows="10" cols="50" minlength="120" placeholder="Tell us about yourself..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <input type="checkbox" id="terms" name="terms" required aria-required="true">
+            <label for="terms">I agree to the <a href="https://termsandconditions" target="_blank" rel="noopener noreferrer">Terms and Conditions</a></label>
+          </div>
+
+          <button type="reset" aria-label="Reset form">Reset</button>
+          <button type="submit" aria-label="Submit form">Submit</button>
+        </fieldset>
+      </form>
+    </div>
+  </main>
+</body>
+</html>
